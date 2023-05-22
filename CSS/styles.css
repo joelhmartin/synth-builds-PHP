@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "Main Font";
+  src: url(../FONTS/Amatic_SC/AmaticSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Technical";
+  src: url(../FONTS/Rajdhani/Rajdhani-Light.ttf);
+}
+
+@font-face {
+  font-family: "Technical-Bold";
+  src: url(../FONTS/Rajdhani/Rajdhani-Bold.ttf);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding : 0;
+  font-family: Technical;
+  background-color: rgba(255, 0, 0, 0.007);
+  overflow-x: hidden;
+}
+
+/* 
+------------------------INDEX-------------------------
+
+NAV
+HEADER
+MAIN
+BROWSE
+UPLOAD
+SEARCH
+FOOTER
+*/
+
+/* ----------------------NAV--------------------------- */
+
+.selected {
+  font-style: italic;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: .5em;
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav {
+  font-size: 1.1em;
+  font-weight: lighter;
+}
+
+.main-nav li {
+  padding: .3em
+}
+
+.nav a:hover { 
+  background-color: rgba(154, 154, 154, 0.4);
+}
+
+/* ----------------------HEADER--------------------------- */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .4);
+  background-image: url(../images/texture.avif);
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 100px;
+}
+
+.page-name {
+  text-align: left;
+  margin-left: .2em;
+  font-size: 1.5em;
+  font-family: Main Font;
+  color: white;
+  font-weight: normal;
+}
+
+.main-nav {
+  margin-right: 1em;
+}
+
+.page-name-big {
+  white-space: nowrap;
+  overflow-x: auto;
+  font-size: 5em;
+}
+
+.section-header {
+  font-family: Technical;
+  font-size: 2.5em;
+}
+
+.my-account-title {
+  font-family: Technical;
+  font-size: 2.5em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* ----------------------MAIN--------------------------- */
+
+.page-container {
+  display: flex;
+}
+
+.page-container {
+  min-height: 100%;
+  margin-bottom: -60px; /* height of the footer */
+}
+
+.page-container:after {
+  content: "";
+  display: block;
+  height: 60px; /* height of the footer */
+}
+
+.login-container {
+  text-align: right;
+  padding-right: 2em;
+}
+
+.main-section {
+  justify-self: left;
+  margin: 1em;
+  min-height: 700px;
+}
+
+@media (max-width: 400px) {
+  .main-section {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.left-container {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+form {
+  padding: .2em
+}
+
+/* ---------------------LEFT SIDE------------------------- */
+
+.left-image-container {
+  text-align: center;
+} 
+
+.account-display {
+  padding-left: .2em;
+  padding-right: .2em;
+}
+
+#prof-thumb {
+  float: right;
+  height: 100px;
+  width: 100px;
+  margin-top: -15px;
+  margin-left: 0;
+  border: 3px solid black;
+  border-radius: 50%
+}
+
+.page-image {
+  float:left;
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 50%
+}
+
+
+/* ----------------------BROWSE--------------------------- */
+
+.patch-container {
+  background-color: rgba(0, 0, 0, 0.03);
+  margin: 2px;
+  text-align: center;
+  height: 140px;
+}
+
+.patch-container > div {
+  min-width: 200px;
+}
+
+.patch-container :first-child {
+  font-family: Technical-Bold;
+}
+
+.main-patch-container img, .left-container img {
+  height: 200px;
+  width: 200px;
+  margin: 1em;
+  border: solid rgba(0, 0, 0, 0.103) 2px
+}
+
+.main-patch-container {
+  padding-bottom: 20px;
+}
+
+.recents, .uploads {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.browse {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: normal;
+  margin-bottom: 100px;
+}
+
+.synths-container {
+  width: 100%;
+  margin: 10px;
+}
+
+/* ----------------------UPLOAD--------------------------- */
+
+#upload-part-1 {
+  margin: -10px 0 0px 0;
+}
+
+.step-row {
+  border-bottom: 1px solid black;
+  padding: .5em;
+  margin: .5em;
+}
+
+.step-row label {
+  padding: 0 5px 0 0;
+}
+
+#last-row {
+  border-bottom: none;
+}
+
+.step {
+  display: inline-block;
+  padding-right: .5em;
+}
+
+.step-num {
+  font-weight: bold;
+  width: 11%;
+}
+
+.step-text {
+  width: 66%;
+}
+
+.step-button {
+  max-width: 19%;
+}
+
+#thanks {
+  font-size: 40px;
+}
+
+/* ----------------------SEARCH--------------------------- */
+
+.options-container {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.form-item-container {
+  position: relative;
+}
+
+.form-item {
+  display: inline;
+}
+
+.form-item label, select {
+  display: inline;
+}
+
+.form-item input[type="submit"] {
+  margin-left: 1em
+}
+
+#form-button {
+  margin-top: 10px
+}
+
+select {
+  width: 120px
+}
+
+.list-search {
+  display: flex;
+  color: black;
+  margin: 0 0 20px 0;
+  justify-content: center;
+}
+
+.list-search h3 {
+  padding: 5px
+}
+
+.list-search label {
+  padding: 3px .1em 3px 2em;
+  font-weight: bold;
+}
+
+.list-search input[type="submit"]:hover {
+  background-color: #8e3e3e35;
+}
+
+.list-search input[type="submit"] {
+  margin-left: 2em;
+}
+
+.list-search input[type="text"] {
+  width: 112px
+}
+
+.options-container {
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  width: 60%;
+  height: auto
+}
+
+.option-item {
+  background-color: white;
+}
+
+/* ----------------------FOOTER--------------------------- */
+
+.main-footer {
+  background-color: rgba(0, 0, 0, .4);
+  background-image: url(../images/texture.avif);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.main-footer-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.main-footer-container ul {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footer-nav li {
+  padding: 0 .5em;
+}
+
+.footer-nav img {
+  width: 30px;
+  height: 30px;
+}
